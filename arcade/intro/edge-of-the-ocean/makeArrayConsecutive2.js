@@ -1,7 +1,7 @@
 function solution(statues) {
     let noReq = 0; // number of statues required
     
-    statues = statues.sort()
+    statues = statues.sort((a,b) => a - b)
     
     let startIdx = 0;
     let noOfStatues = statues.length;
