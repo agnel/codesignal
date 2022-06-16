@@ -1,15 +1,14 @@
 function solution(inputString) {
-    
     /**
-     * Using while loop with two pointers
+     * Using while loop with single pointer
      */
     let startIdx = 0
-    let endIdx = inputString.length - 1
+    let strLen = inputString.length;
+    let endIdx = strLen / 2
 
-    while(startIdx <= endIdx) {
-        if(inputString[startIdx] != inputString[endIdx]) return false;
+    while(startIdx < endIdx) {
+        if(inputString[startIdx] != inputString[strLen - 1 - startIdx]) return false;
         startIdx++;
-        endIdx--;
     }
     
     return true;
